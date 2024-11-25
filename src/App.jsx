@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 import { Navbar } from "./components/Navbar/Navbar";
 import HeroSection from "./pages/HeroSection/HeroSection";
@@ -15,10 +15,10 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<GallerySection />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );
 };
 
 export default App;
-
