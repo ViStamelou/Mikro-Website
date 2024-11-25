@@ -1,12 +1,24 @@
-import './App.module.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
-  
+import { Navbar } from "./components/Navbar/Navbar";
+import HeroSection from "./pages/HeroSection/HeroSection";
+import About from "./pages/AboutSection/AboutSection";
+import GallerySection from "./pages/GallerySection/GallerySection";
+import Contact from "./pages/Contact/Contact";
+
+const App = () => {
   return (
-    <>
-      Hello World!!
-    </>
-  )
-}
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/mikro-website" element={<HeroSection />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/gallery" element={<GallerySection />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
+

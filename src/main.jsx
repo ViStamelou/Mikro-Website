@@ -1,13 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+// import { StrictMode } from 'react'
+// import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 import '@fontsource-variable/roboto-slab';
 import '@fontsource-variable/open-sans';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+const root = ReactDOM.createRoot(document.getElementById("root")); // Use createRoot instead of render
+root.render(
+  <React.StrictMode>
     <App />
-  </StrictMode>,
-)
+  </React.StrictMode>
+);
+
