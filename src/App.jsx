@@ -8,10 +8,10 @@ import Contact from "./pages/Contact/Contact";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/mikro-website">
       <Navbar />
       <Routes>
-        <Route path="/mikro-website" element={<HeroSection />} />
+        <Route path="/" element={<HeroSection />} />
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<GallerySection />} />
         <Route path="/contact" element={<Contact />} />
