@@ -1,0 +1,12 @@
+:root {
+    /*Colours*/
+    --color-text:#fcf6f3;
+    --color-primary:#eaf3fb;
+    --color-secondary:#66719f;
+    --color-dark:#b2896a;
+    --color-bg:#f7cca7;
+
+    /*Fonts*/
+    --font-roboto-slab: "Roboto Slab";
+    --font-open-sans: "Open Sans";
+}
