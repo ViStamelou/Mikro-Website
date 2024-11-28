@@ -2,15 +2,24 @@
 import styles from "./HeroSection.module.css";
 import { getImageUrl } from "../../utils";
 
-const HeroSection = () => {
-  const heroImageUrl = getImageUrl("Homepage.jpg");
+export const HeroSection = () => {
 
   return (
-    <div className={styles.heroContainer}>
-      <img className={styles.heroImage} src={heroImageUrl} alt="image of the cottage" />
-      <h1 className={styles.heroTitle}>Welcome the Stone Cottage by the Sea</h1>
-      <p className={styles.heroDescription}>This is the homepage content.</p>
-    </div>
+    <section className={styles.container}>
+      <div className={styles.content}>
+        <h1 className={styles.title}>Stone Cottage by the Sea</h1>
+        <p className={styles.description}>
+         This is Mikro paradise
+        </p>
+      </div>
+      <img
+        src={getImageUrl("hero/Homepage.jpg")}
+        alt="Image of cottage"
+        className={styles.heroImg}
+      />
+      <div className={styles.topBlur} />
+      <div className={styles.bottomBlur} />
+    </section>
   );
 };
 
