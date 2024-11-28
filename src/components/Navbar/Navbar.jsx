@@ -9,8 +9,12 @@ export const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <NavLink className={styles.title} to="/mikro-website"> 
-        Mikro Stone Cottage
+      <NavLink className={styles.title} to="/mikro-website">
+        <img
+          src={getImageUrl("Navbar/logo.png")} 
+          alt="Mikro Stone Cottage Logo"
+          className={styles.logo} 
+        />
       </NavLink>
       <div className={styles.menu}>
         <img

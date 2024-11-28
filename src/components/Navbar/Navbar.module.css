@@ -1,20 +1,24 @@
 @import "../../vars.css";
 
 .navbar {
-  position: relative;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%;
   display: flex;
   align-items: center;
+  height: 60px;
   justify-content: space-between;
-  padding-top: 61px;
-  z-index: 2;
-  margin: 0 10%;
+  padding: 20px 10%; 
+  z-index: 2; 
+  background-color: var(--color-dark);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
-.title {
-  font-size: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--color-text);
+.logo {
+  height: 80px;
+  width: auto;
+  max-width: 100%;
 }
 
 
@@ -36,12 +40,22 @@
   font-size: 25px;
   color: var(--color-text);
   text-decoration: none;
+  font-family: var(--font-roboto-slab);
 }
 
 @media screen and (max-width: 830px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    height: 80px;
+  }
+
+  .logo {
+    height: 100px; /* Increase logo height */
+    width: auto;
+    position: relative; /* Allow positioning adjustments */
+    top: -25px; /* Move the logo upwards by 20px */
+    left: -10px;
   }
 
   .menu {
